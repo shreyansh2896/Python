@@ -1,0 +1,37 @@
+2) Bag of words
+
+
+i/p                            
+he is a good boy                1                                                                           s1=good boy
+she is a good girl              1    =>  Convert all words into lowercase and then apply stopwords          s2=good girl
+Boy and girl are good           1                                                                           s3=boy girl good
+
+
+
+Vocabulary   frequency
+                                       good  boy  girl   o/p       We can see that initially in OHE each of the vocabulary is getting it's own 
+good           3                => S1  [1    1      0]    1        vectors in terms of 1's and 0's but this case whole sentence is converted 
+boy            2                   S2  [1    0      1]    1        as vectors.
+girl           2                   S3  [1    1      1]    1
+
+
+There are 2 types of BOW:
+
+1) Binary BOW = Only 1 & 0 irrespective of how many times a word has appeared.
+2) BOW = {count will gets updated based on the frequency of the words}.
+
+Eg: if it is good boy good in S1 then vector will look like:
+
+S1  [2    1      0]
+
+
+* Advantages 
+1) Simple and intuitive
+2) Fixed size input --> Can be given as input to ML algorithm
+
+
+* Disadvantages:
+1) Sparse matrix --> Lead to overfitting
+2) Ordering of the words is getting changed so context is getting changed. if you change the order then semantic relation is not getting captured properly.
+3) Out of vocabulary (OOV).
+4) Semnatic meaning is still not getting captured (What is the most important context in that word is not getting captured, if there are 2 sentences both are simialar but one of the sentence is just opposite of each other then both the sentence will look almost similar if you draw the 2 sentences vecotr in plane but in actual they are completly opposite of each other(Eg: Food is good, Food is not good)).

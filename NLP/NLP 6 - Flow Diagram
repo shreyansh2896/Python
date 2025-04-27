@@ -1,0 +1,33 @@
+Step 1 :                        
+
+Text Preprocessing-1 
+
+Tokenization 
+lowercase the words
+Regular expression
+
+
+Step 2:
+Text Preprocessing-2 
+
+Stemming 
+Lemmatization
+Stopwords
+
+
+Step 3:
+
+Converting text into vectors
+
+Below are the differnt ways to do it:
+
+1) One hot encoding
+2) Bag of words (Super imp)
+3) TF-IDF
+4) Word2Vec 
+5) Avgword2vec
+
+
+Step 4:
+
+After converting texts into vector use ML Algorithms

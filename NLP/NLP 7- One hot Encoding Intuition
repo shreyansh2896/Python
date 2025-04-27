@@ -1,0 +1,35 @@
+D1) The food is good                                 Distinct 7 unique words or vocabularies --> The, food, is, good, bad,pizza,amazing
+D2) The food is bad                                                                               1    0     0   0    0    0     0
+D3) Pizza is amazing                                                                              0    1     0   0    0    0     0
+
+
+For D1 We have 4*7 matrix
+
+[[1 0 0 0 0 0 0 ],
+[0 1 0 0 0 0 0 ],
+[0 0 1 0 0 0 0 ],
+[0 0 0 1 0 0 0 ]]
+
+
+For D2 also We have 4*7 matrix
+
+[[1 0 0 0 0 0 0 ],
+[0 1 0 0 0 0 0 ],
+[0 0 1 0 0 0 0 ],
+[0 0 0 0 1 0 0 ]]                      ## [0 0 0 0 1 0 0 ] represents bad as it is coming at 5th position.
+
+
+For D2 We have 3*7 matrix since there are 3 unique words in d3.
+
+
+
+## Advantages of OHE
+1) Easy to implement [in python we can use sklearn,pd.get_dummies()]
+
+
+## Disadvantage of OHE
+1) Sparse matrix (A sparse matrix is a matrix where most of the elements are zero) --> This leads to overfitting
+2) For ML algorithm we need Fixed size input. (for d1 & d2 size is 4*7 but for d3 it is 3*7).
+3) No Semnatic Meaning is captured.(Eg: food and good, how these 2 words are related or how much is the similarity of the words these information will not be captured becase at the end we are only getting 1's and 0's).
+4) Out of vocabulary (OOV). (if a new word comes as a test dataset and we don't have any such vector representation of the new word then it will not work.
+5) More the number of different vocabularies more will be the number of variables and more will be the number of 1's and 0's.
